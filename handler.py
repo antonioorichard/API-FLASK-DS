@@ -39,9 +39,21 @@ def get_prediction( ):
     # Predição
         pred     = model.predict( data_raw)
         
+        # Classes traduzidas
+        if pred == 0:
+            pred2 = "Influenza"
+        elif pred == 1:
+            pred2 = "Outro vírus respiratório"
+        elif pred == 2:
+            pred2 = "Outro agente 'etiologico'"
+        elif pred == 3:
+            pred2 = "Não específicado"
+        elif pred == 4:
+            pred2 = "Covid-19"
+        else:
+            pred2 = "Veio uma classificação fora do esperado"
+        # /Classes traduzidas
         
-        
-        pred2 = pred.apply( lambda x: "0" if pred == 0 else "1"  if pred == 1 else "2" if pred == 2 else "3" if pred == 3 else "4")
 
         
         return pred2
