@@ -39,10 +39,10 @@ def get_prediction( ):
     # Predição
         pred     = model.predict( data_raw)
         
-        if pred == 1:
-            pred2 = "Uma doença"
-        else:
-            pred2 = " Não é 1, mas o retorno funcionou!"
+        
+        
+        pred2 = pred.apply( lambda x: "0" if pred == 0 else "1"  if pred == 1 else "2" if pred == 2 else "3" if pred == 3 else "4")
+
         
         return pred2
 
