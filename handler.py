@@ -17,8 +17,8 @@ model = pickle.load(open( 'model/model_aws.pkl', 'rb'))
 #Iniciar aplicação no Flask
 app = Flask( __name__)
 
-# Direcionar rota da aplicação 
-@app.route('/')
+# Direcionar rota da aplicação, e o método que permite receber request! 
+@app.route('/', methods = ['POST']) 
 
 # Vamos criar a função predição
 def get_prediction(model, data):
