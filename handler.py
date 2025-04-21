@@ -38,7 +38,12 @@ def get_prediction( ):
     
     # Predição
         pred     = model.predict( data_raw)
-        pred2    = pred.to_json()
+        
+        if pred == 1:
+            pred2 = "Uma doença"
+        else:
+            pred2 = " Não é 1, mas o retorno funcionou!"
+        
         return pred2
 
     # se não der certo vamos retorna alguma coisa na linha abaixo. 
