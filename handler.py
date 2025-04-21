@@ -9,7 +9,7 @@ Created on Sun Apr 20 19:42:04 2025
 """
 import pickle
 from flask import Flask, request, Response
-import panda as pd
+import pandas as pd
 import os
 
 model = pickle.load(open( 'model/model_aws.pkl', 'rb'))
