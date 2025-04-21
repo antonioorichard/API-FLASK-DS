@@ -11,6 +11,7 @@ import pickle
 from flask import Flask, request, Response
 import pandas as pd
 import os
+import numpy as np
 
 model = pickle.load(open( 'model/model_aws.pkl', 'rb'))
 
@@ -37,8 +38,8 @@ def get_prediction( ):
     
     # Predição
         pred     = model.predict( data_raw)
-    
-        return pred.to_json(orient='records', date_format='iso')
+        pred2    = np.expm1(pred)
+        return pred2.to_json(orient='records', date_format='iso')
 
     # se não der certo vamos retorna alguma coisa na linha abaixo. 
     # Finalizando o processo
