@@ -38,7 +38,7 @@ def get_prediction( ):
     # Predição
         pred     = model.predict( data_raw)
     
-        return pred
+        return pred.to_json(orient='records', date_format='iso')
 
     # se não der certo vamos retorna alguma coisa na linha abaixo. 
     # Finalizando o processo
