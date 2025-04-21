@@ -21,7 +21,7 @@ app = Flask( __name__)
 @app.route('/', methods = ['POST']) 
 
 # Vamos criar a função predição
-def get_prediction(model, data):
+def get_prediction( data):
     # Solicitar os dados no formato json
     data_json =  request.get_json()
     
