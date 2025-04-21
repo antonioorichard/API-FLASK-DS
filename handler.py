@@ -38,7 +38,7 @@ def get_prediction( ):
     
     # Predição
         pred     = model.predict( data_raw)
-        pred2    = list(pred)
+        pred2    = pred.to_json()
         return pred2
 
     # se não der certo vamos retorna alguma coisa na linha abaixo. 
