@@ -23,7 +23,7 @@ app = Flask( __name__)
 # Vamos criar a função predição
 def get_prediction( data):
     # Solicitar os dados no formato json
-    data_json =  request.get_json()
+    data_json =  request.get_json(data)
     
     # Fazer uma verificação se dados realmente vinheram
     if data_json:
