@@ -54,8 +54,7 @@ def get_prediction( ):
             pred2 = "Veio uma classificação fora do esperado"
         # /Classes traduzidas
         
-        # Teste se dar para enviar em Json
-        pred2 = pred.to_json()
+        
         return pred2
 
     # se não der certo vamos retorna alguma coisa na linha abaixo. 
