@@ -47,7 +47,7 @@ def get_prediction( ):
         elif pred == 2:
             pred2 = "Outro agente 'etiologico'"
         elif pred == 3:
-            pred2 = "Não específicado"
+            pred2 = "Não especificado"
         elif pred == 4:
             pred2 = "Covid-19"
         else:
